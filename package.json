@@ -37,6 +37,6 @@
     "vite-plugin-shopify": "^2.1.0"
   },
   "config": {
-    "store": "my-shop.myshopify.com"
+    "store": "ct-tester.myshopify.com"
   }
 }
