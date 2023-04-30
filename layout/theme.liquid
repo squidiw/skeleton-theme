@@ -14,6 +14,7 @@
     {%- liquid
       render 'vite-tag' with 'theme.css'
       render 'vite-tag' with 'theme.ts'
+      render 'vite-tag' with 'theme.js'
     -%}
 
     {{ content_for_header }}
@@ -21,6 +22,7 @@
 
   <body class="grid min-h-full grid-cols-1 grid-rows-1">
     <main>
+      {% section 'header' %}
       {{ content_for_layout }}
     </main>
   </body>

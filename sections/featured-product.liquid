@@ -1,0 +1,24 @@
+<div>
+    <span class="inline-block image-container">
+    {{ section.settings.featured_product.featured_media | image_url: width: 400 | image_tag: loading: 'lazy' }}
+    <span class="uppercase">Quick add</span>
+    </span>
+    <h1>{{ section.settings.featured_product.title }}</h1>
+</div>
+{% schema %}
+{
+  "name": "featured-product",
+  "settings": [
+    {
+      "type": "product",
+      "id": "featured_product",
+      "label": "Featured Product"
+    }
+  ],
+  "presets": [
+    {
+      "name": "featured-product"
+    }
+  ]
+}
+{% endschema %}
