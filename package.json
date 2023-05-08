@@ -17,7 +17,7 @@
   "scripts": {
     "dev": "concurrently --raw --kill-others \"pnpm run dev:shopify\" \"pnpm run dev:vite\"",
     "dev:shopify": "shopify theme dev --live-reload full-page --store $npm_package_config_store",
-    "dev-sass":"sass --watch frontend/entrypoints",
+    "dev-sass": "sass --watch frontend/entrypoints",
     "dev:vite": "vite",
     "build": "vite build",
     "format": "prettier -w . --cache --plugin-search-dir=.",
@@ -32,7 +32,6 @@
     "postcss": "^8.4.21",
     "prettier": "^2.8.7",
     "prettier-plugin-tailwindcss": "^0.2.7",
-    "sass": "^1.62.1",
     "tailwindcss": "^3.3.1",
     "typescript": "^5.0.2",
     "vite": "^4.2.1",
@@ -40,8 +39,5 @@
   },
   "config": {
     "store": "ct-tester.myshopify.com"
-  },
-  "dependencies": {
-    "node-sass": "^8.0.0"
   }
 }

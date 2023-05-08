@@ -1,0 +1,58 @@
+<section>
+<div class="flex w-full relative max-h-[500px]">
+    {% if section.settings.image != blank %}
+        {{ section.settings.image | image_url: width: 2540 | image_tag: widths: "375,768,1024,1440,2540", class: 'object-cover', preload: true }}
+            {% else %}
+        {{ 'lifestyle-1' | placeholder_svg_tag }}
+    {% endif %}
+    <div class="flex flex-col absolute md:top-2/4 md:transform md:-translate-y-2/4">
+        <span>{{ section.settings.top_text }}</span>
+        <span>{{ section.settings.subtle_text }}</span>
+        <a href="{{ section.settings.btn_link }}">{{ section.settings.btn_text }}</a>
+    </div>
+    
+</div>
+</section>
+{% schema %}
+    {
+        "name": "Image with text banner",
+        "class": "img-w-text-banner",
+        "settings": [
+            {
+                "type":"image_picker",
+                "id":"image",
+                "label":"Select Image"
+            },
+            {
+                "type":"text",
+                "id":"top_text",
+                "label":"Primary text",
+                "default":"Top label here"
+            },
+            {
+                "type":"text",
+                "id":"subtle_text",
+                "label":"Subtle text",
+                "default":"Subtle text"
+            },
+            {
+                "type":"text",
+                "id":"btn_text",
+                "label":"Button text",
+                "default":"Button text"
+            },
+            {
+                "type":"url",
+                "id":"btn_link",
+                "label":"Button URL",
+                "default":"/"
+            }
+        ],
+        "presets":[
+            {
+                "name":"Image with Banner text"
+            }
+        ]
+    }
+{% endschema %}
+

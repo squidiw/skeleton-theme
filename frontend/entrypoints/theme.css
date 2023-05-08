@@ -1,11 +1,4 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.image-container {
-  background-color: blue;
-}
-.image-container .uppercase {
-  text-transform: uppercase;
-}
 
-/*# sourceMappingURL=theme.css.map */
